@@ -36,6 +36,7 @@ div {
 
 #zero {
     border-right: 0;
+    text-align: end;
 }
 
 #divide,
