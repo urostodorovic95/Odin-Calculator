@@ -1,4 +1,5 @@
 let operandOne, operandTwo, operator;
+let displayValue;
 
 function operate(firstOperand, operator, secondOperand) {
   if (operator === "+") {
@@ -26,4 +27,8 @@ function multiply(a, b) {
 
 function divide(a, b) {
   return a / b;
+}
+
+function populateDisplay() {
+  
 }

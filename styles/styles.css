@@ -41,6 +41,10 @@ div {
     text-align: end;
 }
 
+#dummy {
+    color: #F9EFDB;
+}
+
 #divide,
 #times,
 #minus,
