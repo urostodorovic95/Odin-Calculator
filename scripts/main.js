@@ -1,16 +1,29 @@
-function add(a,b) {
-    return a + b;
-};
+let operandOne, operandTwo, operator;
 
-function subtract(a,b) {
-    return a - b;
-};
+function operate(firstOperand, operator, secondOperand) {
+  if (operator === "+") {
+    return add(firstOperand, secondOperand);
+  } else if (operator === "-") {
+    return subtract(firstOperand, secondOperand);
+  } else if (operator === "*") {
+    return multiply(firstOperand, secondOperand);
+  } else if (operator === "/") {
+    return divide(firstOperand, secondOperand);
+  }
+}
 
-function multiply(a,b) {
-    return a * b;
-};
+function add(a, b) {
+  return a + b;
+}
 
-function divide(a,b) {
-    return a / b;
-};
+function subtract(a, b) {
+  return a - b;
+}
 
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
