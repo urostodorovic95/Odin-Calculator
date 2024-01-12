@@ -1,4 +1,5 @@
-let operandOne, operandTwo, operator;
+let operandOne, operandTwo;
+let operatorsArray = [];
 let displayValue = "";
 
 function operate(firstOperand, operator, secondOperand) {
@@ -47,7 +48,11 @@ function updateDisplay(e) {
 const operators = document.querySelectorAll(".operator");
 operators.forEach((operator) => {
   operator.addEventListener("click", (e) => {
-    operator = e.currentTarget.id;
+    operatorSelected = e.currentTarget.id;
+    operatorsArray.push(operatorSelected);
+    operatorsArray.length >= 2
+      ? (operator = operatorsArray.at(-2))
+      : (operator = operatorsArray.at(0));
     if (operandOne) {
       operandTwo = +displayValue;
     } else {
