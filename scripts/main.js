@@ -60,12 +60,11 @@ operators.forEach((operator) => {
     }
     displayValue = "";
     if (operandOne && operator && operandTwo) {
-      console.log(operandOne, operator, operandTwo);
-      const result = operate(operandOne, operator, operandTwo);
-      console.log(result);
-      document.querySelector(".display").textContent = result;
+      const result = parseFloat(
+        operate(operandOne, operator, operandTwo).toFixed(4)
+      );
+      document.querySelector(".display").textContent = operandOne = result;
       operandTwo = operator = "";
-      operandOne = result;
     }
   });
 });
