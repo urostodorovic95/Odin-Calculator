@@ -6,7 +6,8 @@ div {
 .display {
     height: 50px;
     text-align: end;
-    font-size: 50px;
+    font-size: 40px;
+    padding: 0px 2px;
     background-color: #9DBC98;
 }
 
