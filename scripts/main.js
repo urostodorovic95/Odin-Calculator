@@ -1,5 +1,5 @@
 let operandOne, operandTwo, operator;
-let displayValue;
+let displayValue = "";
 
 function operate(firstOperand, operator, secondOperand) {
   if (operator === "+") {
@@ -29,6 +29,17 @@ function divide(a, b) {
   return a / b;
 }
 
-function populateDisplay() {
-  
+let displayUpdateTriggers = document.querySelectorAll(".number, #comma");
+
+displayUpdateTriggers.forEach((Element) => {
+  Element.addEventListener("click", (e) => {
+    updateDisplay(e);
+  });
+});
+
+function updateDisplay(e) {
+  displayValue.includes(".") && e.target.textContent === "."
+    ? {}
+    : (displayValue = displayValue + "" + e.target.textContent);
+  document.querySelector(".display").textContent = displayValue;
 }
