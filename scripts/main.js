@@ -31,8 +31,8 @@ function divide(a, b) {
 
 let displayUpdateTriggers = document.querySelectorAll(".number, #comma");
 
-displayUpdateTriggers.forEach((Element) => {
-  Element.addEventListener("click", (e) => {
+displayUpdateTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (e) => {
     updateDisplay(e);
   });
 });
