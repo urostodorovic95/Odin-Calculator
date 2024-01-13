@@ -49,11 +49,12 @@ const operators = document.querySelectorAll(".operator, #equals");
 operators.forEach((operator) => {
   operator.addEventListener("click", (e) => {
     if (e.currentTarget.id !== "equals") {
-      console.log(e.currentTarget.id)
+      // memorize the used operator by storing in an array (in the future perhaps implement history view)
       let operatorSelected = e.currentTarget.id;
       operatorsArray.push(operatorSelected);
     } else {
-      operatorsArray.push(operatorsArray.at(-1))
+      // if equals is used, still do the math but memorize the last operator
+      operatorsArray.push(operatorsArray.at(-1));
     }
     operatorsArray.length >= 2
       ? (operator = operatorsArray.at(-2))
@@ -64,7 +65,9 @@ operators.forEach((operator) => {
       operandOne = +displayValue;
     }
     displayValue = "";
+    // if all conditions are good, do the math
     if (operandOne && operator && operandTwo) {
+      // reduce number of decimals
       const result = parseFloat(
         operate(operandOne, operator, operandTwo).toFixed(4)
       );
