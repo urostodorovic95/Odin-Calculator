@@ -1,3 +1,10 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 div {
   border: 0.3px solid #9dbc98;
   font-weight: bold;
@@ -16,7 +23,7 @@ div {
   background-color: #f9efdb;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 35%;
   user-select: none !important;
 }
 
@@ -60,4 +67,10 @@ div {
 #plus,
 #equals {
   background-color: #ebd9b4;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 80px;
 }
