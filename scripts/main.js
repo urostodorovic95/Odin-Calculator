@@ -1,6 +1,7 @@
 let operandOne, operandTwo;
 let operatorsArray = [];
 let displayValue = "";
+const acButton = document.querySelector("#AC");
 
 function operate(firstOperand, operator, secondOperand) {
   if (operator === "plus") {
@@ -79,4 +80,8 @@ operators.forEach((operator) => {
       operandTwo = operator = "";
     }
   });
+});
+
+acButton.addEventListener("click", () => {
+  location.reload();
 });
