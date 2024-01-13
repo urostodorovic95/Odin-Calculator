@@ -45,11 +45,16 @@ function updateDisplay(e) {
   document.querySelector(".display").textContent = displayValue;
 }
 
-const operators = document.querySelectorAll(".operator");
+const operators = document.querySelectorAll(".operator, #equals");
 operators.forEach((operator) => {
   operator.addEventListener("click", (e) => {
-    operatorSelected = e.currentTarget.id;
-    operatorsArray.push(operatorSelected);
+    if (e.currentTarget.id !== "equals") {
+      console.log(e.currentTarget.id)
+      let operatorSelected = e.currentTarget.id;
+      operatorsArray.push(operatorSelected);
+    } else {
+      operatorsArray.push(operatorsArray.at(-1))
+    }
     operatorsArray.length >= 2
       ? (operator = operatorsArray.at(-2))
       : (operator = operatorsArray.at(0));
