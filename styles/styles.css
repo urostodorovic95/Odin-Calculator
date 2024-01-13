@@ -24,6 +24,7 @@ div {
   flex-direction: column;
   width: 35%;
   user-select: none !important;
+  margin-bottom: 4px;
 }
 
 .row {
@@ -87,3 +88,9 @@ h1 {
   font-weight: 100px;
   color: whitesmoke;
 }
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font: inherit;
+  }
