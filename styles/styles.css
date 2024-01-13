@@ -90,7 +90,17 @@ h1 {
 }
 
 footer {
-    text-align: center;
-    margin-top: 20px;
-    font: inherit;
+  text-align: center;
+  margin-top: 20px;
+  font: inherit;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .calc-frame {
+    width: 80%;
   }
+
+  h1 {
+    font-size: 25px;
+  }
+}
